@@ -1,0 +1,56 @@
+table {
+	width: 400px;
+    height: 300px;
+    display: block;
+    display: block; 
+    overflow: scroll;
+}
+thead {
+	color:green;
+    width: 400px; 
+    position: sticky;
+    top: 0;
+    background: white;
+     z-index: 1000;
+     will-change: transform;
+}
+tbody {
+	color:blue; 
+    height: 200px;
+    width: 400px; 
+    z-index: 1;
+}
+tfoot {
+	color:red;
+    width: 400px;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    will-change: transform;
+}
+thead, tbody tr, tfoot {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+thead, tfoot {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table, th, td {
+  border: 1px solid black;
+}
+td, th { width: 200px; }
+td:first-child {
+	position: sticky;
+    will-change: transform;
+    left: 0;
+    background: white;
+    
+}
+th:first-child {
+	position: sticky;
+    left: 0;
+    background: white;
+    will-change: transform;
+  transform: translateZ(0)
+}
