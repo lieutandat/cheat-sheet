@@ -7,7 +7,7 @@ To inherit in child node we have to
 
 <template>
   <root>
-    <child v-bind="$attrs/>
+    <child v-bind="$attrs" />
   </root>
 </template>
 <script>
